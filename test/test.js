@@ -3,46 +3,45 @@ https://gist.github.com/RogerVW84/0881ab44f971b3f166ad9057d5fd9e3f/index.html
 
 
 // You can change global variables here:
-var radius = 240; // how big of the radius
-var autoRotate = true; // auto rotate or not
-var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 120; // width of images (unit: px)
-var imgHeight = 170; // height of images (unit: px)
+radius = 240; // how big of the radius
+let autoRotate = true; // auto rotate or not
+let rotateSpeed = -60; // unit: seconds/360 degrees
+let imgWidth = 120; // width of images (unit: px)
+let imgHeight = 170; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
-var bgMusicURL = 'https://soundcloud.com/anthony112310/saxobeatv1';
-var bgMusicControls = true; // Show UI music control
+let bgMusicURL = 'https://soundcloud.com/anthony112310/saxobeatv1';
+let bgMusicControls = true; // Show UI music control
 
 /*
      NOTE:
        + imgWidth, imgHeight will work for video
        + if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
        + Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
-       + Custom from code in tiktok video  https://www.facebook.com/J2TEAM.ManhTuan/videos/1353367338135935/
 */
 
 
 // ===================== start =======================
-// animation start after 1000 milis
+// animation start after 1000 ms
 setTimeout(init, 600);
 
-var odrag = document.getElementById('drag-container');
-var ospin = document.getElementById('spin-container');
-var aImg = ospin.getElementsByTagName('img');
-var aVid = ospin.getElementsByTagName('video');
-var aEle = [...aImg, ...aVid]; // combine 2 arrays
+let odrag = document.getElementById('drag-container');
+let ospin = document.getElementById('spin-container');
+let aImg = ospin.getElementsByTagName('img');
+let aVid = ospin.getElementsByTagName('video');
+let aEle = [...aImg, ...aVid]; // combine 2 arrays
 
 // Size of images
 ospin.style.width = imgWidth + "px";
 ospin.style.height = imgHeight + "px";
 
 // Size of ground - depend on radius
-var ground = document.getElementById('ground');
+let ground = document.getElementById('ground');
 ground.style.width = radius * 3 + "px";
 ground.style.height = radius * 3 + "px";
 
 function init(delayTime) {
-  for (var i = 0; i < aEle.length; i++) {
+  for (let i = 0; i < aEle.length; i++) {
     aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
     aEle[i].style.transition = "transform 1s";
     aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
@@ -62,14 +61,14 @@ function playSpin(yes) {
   ospin.style.animationPlayState = (yes?'running':'paused');
 }
 
-var sX, sY, nX, nY, desX = 0,
+let sX, sY, nX, nY, desX = 0,
     desY = 0,
     tX = 0,
     tY = 10;
 
 // auto spin
 if (autoRotate) {
-  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+  let animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
 
@@ -86,12 +85,12 @@ if (bgMusicURL) {
 document.onpointerdown = function (e) {
   clearInterval(odrag.timer);
   e = e || window.event;
-  var sX = e.clientX,
+  let sX = e.clientX,
       sY = e.clientY;
 
   this.onpointermove = function (e) {
     e = e || window.event;
-    var nX = e.clientX,
+    let nX = e.clientX,
         nY = e.clientY;
     desX = nX - sX;
     desY = nY - sY;
@@ -123,7 +122,7 @@ document.onpointerdown = function (e) {
 
 document.onmousewheel = function(e) {
   e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
+  let d = e.wheelDelta / 20 || -e.detail;
   radius += d;
   init(1);
 };
