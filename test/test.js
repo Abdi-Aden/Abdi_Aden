@@ -3,7 +3,7 @@ https://gist.github.com/RogerVW84/0881ab44f971b3f166ad9057d5fd9e3f/index.html
 
 
 // You can change global variables here:
-radius = 240; // how big of the radius
+ radius = 240; // how big of the radius
 let autoRotate = true; // auto rotate or not
 let rotateSpeed = -60; // unit: seconds/360 degrees
 let imgWidth = 120; // width of images (unit: px)
@@ -72,14 +72,6 @@ if (autoRotate) {
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
 
-// add background music
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls? 'controls': ''} autoplay loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
-}
 
 // setup events
 document.onpointerdown = function (e) {
@@ -126,3 +118,6 @@ document.onmousewheel = function(e) {
   radius += d;
   init(1);
 };
+
+
+
