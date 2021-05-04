@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family:'Roboto', sans-serif;
+  color:#ffffff;
+  margin:0;
+  padding:0;
+}
+
+.navigation{
+  width:100%;
+  height:100px;
+  /* background-color:#000; */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply,multiply;}
+
+.navigation .logo{
+  display: inline-block;
+  vertical-align: top;
+  height:80px;
+  margin:5px;
+  padding:5px;
+  border-radius: 50%;
+}
+
+.navigation ul{
+  float:right;
+  font-size:25px;
+  padding:10px;
+}
+
+.navigation li{
+  list-style:none;
+  display:inline;
+  margin:20px;
+  padding:20px;
+}
+
+.navigation a{
+  text-decoration:none;
+  color:#ffffff;
+}
+
+h1{
+  font-size:72px;
+  font-weight : bold;
+  text-align:center;
+  content-align:center;
+}
+
+.container-1{
+  width:100%;
+  height:768px;
+}
+
+.container-1 h1{
+  padding-top:200px;
+}
+
+.container{
+  width:100%;
+  height:568px;
+}
+
+.container h3{
+  font-weight:300;
+  font-style:italic;
+  text-align:center;
+}
+
+.container-intro{
+    text-align: center;
+  background-color:white;
+}
+
+.container-intro h2{
+  color:black;
+  font-size:48px;
+  width:755px;
+  height:170px;
+  font-weight:100;
+  margin:auto;
+  padding-top:200px;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+}
+
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/* .container-projects{
+  background-color:white;
+  color:black;
+  text-align:center;
+  padding-top:100px;
+  height:auto;
+}
+.container-portofolio h2{
+  font-size:25px;
+  padding-top:50px;
+  padding-bottom:50px;
+  font-weight:600;
+}
+.container-projects h3{
+  margin:auto;
+}
+.container-projects img{
+  width:400px;
+  height: 400px;
+  margin:auto;
+  padding:auto;
+  border-radius: 4%;
+} */
+/* About Section */
+.container-about{
+  background-color:white;
+  color:black;
+  text-align:center;
+}
+
+.container-about{
+  background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, rgba(32,29,31, 0.56),rgba(32,29,31, 0.56));
+  height:700px;
+  margin:auto;
+  padding:auto;
+}
+.container-about h2{
+  font-size:25px;
+  padding-top:50px;
+  padding-bottom:20px;
+  font-weight:600;
+}
+
+.container-about img{
+  width:150px;
+  border-radius:50%;
+}
+
+.container-about p{
+  height:200px;
+  width:400px;
+  padding-top:20px;
+  font-size:20px;
+  font-weight:lighter;
+  margin:auto;
+  padding:auto;
+}
+
+.container-about i{
+  color:black;
+  font-size:80px;
+  padding:10px 30px;
+}
+
+.container-about .facebook i:hover{
+  color:#3B5998;
+}
+
+.container-about .twitter i:hover{
+  color:#55acee;
+}
+
+.container-about .instagram i:hover{
+  color:#8a3ab9;
+}
+
+/* Contact Section */
+.container-contact{
+  background-color:white;
+  color:black;
+  text-align:center;
+  height:700px;
+}
+
+.container-contact h2{
+  font-size:25px;
+  padding-top:50px;
+  padding-bottom:20px;
+  font-weight:600;
+}
+
+.container-contact input[type=text], [type=email], textarea{
+  width:460px;
+  padding:12px;
+  resize:none;
+  border:none;
+  margin-top:20px;
+}
+
+textarea{
+  height:130px;
+}
+
+.form{
+  width:500px;
+  height:350px;
+  margin:auto;
+  padding:auto;
+  background-color:#eaeaea;
+  border-radius:2%;
+}
+
+input[type=submit]{
+    background-color: #778884;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top:10px;
+}
+
+input[type=submit]:hover{
+  background-color:#000000;
+}
+
+.footer{
+  position:bottom;
+  text-align:center;
+  padding:20px;
+}
