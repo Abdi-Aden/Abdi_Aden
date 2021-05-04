@@ -15,10 +15,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #111;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
-    -webkit-transform-style: preserve-3d;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);    -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
   }
   
