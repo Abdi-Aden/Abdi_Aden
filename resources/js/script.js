@@ -100,12 +100,12 @@ document.onpointerdown = function (e) {
   return false;
 };
 // Images will fold in on each other when zoomed in on mouse
-document.onmousewheel = function(e) {
-  e = e || window.event;
-  let d = e.wheelDelta / 20 || -e.detail;
-  radius += d;
-  init(1);
-};
+// document.onmousewheel = function(e) {
+//   e = e || window.event;
+//   let d = e.wheelDelta / 20 || -e.detail;
+//   radius += d;
+//   init(1);
+// };
 
 
 
